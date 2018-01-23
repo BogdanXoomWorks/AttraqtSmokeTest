@@ -16,9 +16,18 @@ public class XpathIdentifiers {
     public static String SEARCH_TABLE_DATA = ".//*[@id='search-terms-report']/tbody/tr/td";
     public static String SEARCH_AVERAGE_RESULTS = ".//*[@id='search-terms-report']/thead/tr/th[4]";
     public static String SEARCH_TABLE_HEADER = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr";
+    //PRODUCT PERFORMANCE
+    public static String PRODUCT_PERFORMANCE_SECTION_HEADER_TEXT = "//*[@id=\"SectionHeader\"]";
+    public static String PRODUCT_PERFORMANCE_TABLE_HEADER_TEXT = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr";
+    public static String PRODUCT_PERFORMANCE_CONTROLS_CONTAINER = "/html/body/div[1]/section/div/div[1]/div[1]";
+    public static String PRODUCT_PERFORMANCE_TABLE_BODY_TEXT = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/tbody";
+    public static String PRODUCT_PERFORMANCE_VIEWS = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr/th[4]";
+    public static String PRODUCT_PERFORMANCE_ADDS_TO_BASKET = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr/th[6]";
+    public static String PRODUCT_PERFORMANCe_UNIQUE_PURCHASES = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr/th[8]";
     //Xpath COLORS
     public static String BG_COLOR_MISSPELLED_SEARCH_TERMS_SECTION_HEADER = "//*[@id=\"SectionHeader\"]";
     public static String COLOR_MISSPELLED_SEARCH_TERMS_TABLE_HEADER = ".//*[@id='misspelled-report']/thead";
     public static String COLOR_MISSPELLED_SEARCH_TERMS_FONT_COLOR = ".//*[@id='misspelled-report']/thead/tr/th";
+    public static String TABLE_BODY_COLOR = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/tbody";
 }
 

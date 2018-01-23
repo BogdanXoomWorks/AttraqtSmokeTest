@@ -48,10 +48,10 @@ public class MisspelledSearchTermsTest extends BaseTest {
         landingPage.load();
         misspelledSearchTerms.load();
         misspelledSearchTerms.resetToDefault();
-        //misspelledSearchTerms.changeDateRange();
-        //assertTrue("Date range was not changed", driver.findElement(By.xpath(".//*[@id='xw-main-nav-button']/span[1]")).isDisplayed());
+        misspelledSearchTerms.changeDateRange();
+        misspelledSearchTerms.resetToDefault();
         misspelledSearchTerms.goToSearchTerms();
         assertEquals(searchTerms.searchTermsURL, driver.getCurrentUrl());
-
+        searchTerms.isLoaded();
     }
 }

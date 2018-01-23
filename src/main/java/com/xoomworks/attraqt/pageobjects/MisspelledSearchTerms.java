@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+import java.util.List;
+
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
 
@@ -39,7 +41,7 @@ public class MisspelledSearchTerms extends LoadableComponent<MisspelledSearchTer
     private WebElement applyReportButton;
     @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[5]/a[2]")
     private WebElement resetDefaultButton;
-    @FindBy(xpath = "//*[@id=\"xw-date-range-param-button\"]")
+    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[1]")
     private WebElement dateRangeDropdownButton;
     @FindBy(xpath = ".//*[@id='SectionHeader']/a")
     private WebElement searchTermsButton;
@@ -61,17 +63,13 @@ public class MisspelledSearchTerms extends LoadableComponent<MisspelledSearchTer
         return variable;
     }
 
-
-
     public void changeDateRange() {
         dateRangeDropdownButton.click();
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        List<WebElement> options = driver.findElements(By.id("xw-date-range-param-menu"));
+        for(WebElement li : options){
+            if (li.getText().equals("Last week (starting Monday)"));
+            li.click();
         }
-        Select dropdown = new Select(driver.findElement(By.id("xw-date-range-param")));
-        dropdown.selectByVisibleText("Last month (starting 1st)");
     }
 
     public void resetToDefault() {

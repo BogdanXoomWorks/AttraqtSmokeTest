@@ -8,7 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.LoadableComponent;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -28,7 +31,7 @@ public class SearchTerms extends LoadableComponent<SearchTerms> {
         driver.get(searchTermsURL);
     }
 
-    @FindBy(xpath = "/html/body/div[1]/header/div/div[2]/div/div/span/a/span[1]")
+    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[3]")
     private WebElement searchTermsDropDown;
     @FindBy(xpath = ".//*[@id='SectionHeader']/a")
     private WebElement misspelledSearchTermsButton;
@@ -50,7 +53,7 @@ public class SearchTerms extends LoadableComponent<SearchTerms> {
     private WebElement averageResults; //Used also for conversion functionality
     @FindBy(xpath = ".//*[@id='search-terms-report']/tbody/tr/td")
     private WebElement dataTableSearchTerms;
-    @FindBy(xpath = "//*[@id=\"highcharts-0\"]")
+    @FindBy(xpath = "//*[@id=\"highcharts-10\"]")
     private WebElement searchTermsChart;
     @FindBy(xpath = ".//*[@id='search-terms-report']/thead/tr/th[5]")
     private WebElement minResults;
@@ -67,23 +70,26 @@ public class SearchTerms extends LoadableComponent<SearchTerms> {
         }
         return variable;
     }
-
-
-
+    public void changeDateRange(){
+        searchTermsDropDown.click();
+        List<WebElement> options = driver.findElements(By.id("xw-date-range-param-menu"));
+        for(WebElement li : options){
+            if (li.getText().equals("Last week (starting Monday)"));
+            li.click();
+        }
+    }
     public boolean showOnlyConversionsFunctionality() {
         tickShowOnlyConversions.click();
         boolean visible = averageResults.isDisplayed();
         System.out.println(visible);
         return visible;
     }
-
     public void includeMinandMaxResults() {
         tickShowOnlyConversions.click();
         tickIncludeMinMaxResults.click();
         assertEquals(true, minResults.isDisplayed());
         assertEquals(true, maxResults.isDisplayed());
     }
-
     public void isLoaded() throws Error {
         assertEquals(searchTermsURL, driver.getCurrentUrl());
         assertEquals(true, misspelledSearchTermsButton.isDisplayed());

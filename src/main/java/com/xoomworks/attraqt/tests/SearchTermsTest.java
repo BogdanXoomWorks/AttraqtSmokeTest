@@ -13,7 +13,6 @@ import static junit.framework.TestCase.assertTrue;
 
 public class SearchTermsTest extends BaseTest{
     private static LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class).get();
-    private static MisspelledSearchTerms misspelledSearchTerms = PageFactory.initElements(driver, MisspelledSearchTerms.class);
     private static SearchTerms searchTerms = PageFactory.initElements(driver, SearchTerms.class);
     private static Commons commons = PageFactory.initElements(driver, Commons.class);
 
@@ -28,7 +27,6 @@ public class SearchTermsTest extends BaseTest{
         assertTrue(searchTerms.searchTermscheckFont(XpathIdentifiers.SEARCH_TERMS_HEADER));
         searchTerms.isLoaded();
     }
-
     @Test
     public void checkColors(){
         landingPage.load();
@@ -42,11 +40,11 @@ public class SearchTermsTest extends BaseTest{
         //Check Color for Report Controls
         assertTrue(commons.checkColors(XpathIdentifiers.SEARCH_APPLY_REPORT_BUTTON, Colors.CSS_COLOR, Colors.COLOR_REPORT_HEADER));
     }
-
     @Test
     public void checkSearchTermsFunctionlaity(){
         landingPage.load();
         searchTerms.load();
+        searchTerms.changeDateRange();
         searchTerms.showOnlyConversionsFunctionality();
         searchTerms.includeMinandMaxResults();
     }
