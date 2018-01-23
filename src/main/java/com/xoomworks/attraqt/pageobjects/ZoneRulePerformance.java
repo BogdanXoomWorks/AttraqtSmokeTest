@@ -50,7 +50,6 @@ public class ZoneRulePerformance extends LoadableComponent<ZoneRulePerformance> 
         }
         return variable;
     }
-
     public void changeSection() {
         dateRangeDropdown.click();
         List<WebElement> options = driver.findElements(By.id("xw-date-range-param-menu"));
@@ -60,7 +59,6 @@ public class ZoneRulePerformance extends LoadableComponent<ZoneRulePerformance> 
         }
         assertEquals("Last week (starting Monday)", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
     }
-
     public void resetToDefault() {
         drilldownPage.click();
         dateRangeDropdown.click();
@@ -74,7 +72,6 @@ public class ZoneRulePerformance extends LoadableComponent<ZoneRulePerformance> 
         resetToDefaultButton.click();
         assertEquals("This month (starting 1st)", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
     }
-
     public void changePage() {
         reportSelection.click();
         List<WebElement> selection = driver.findElements(By.id("xw-main-nav-menu"));
@@ -84,7 +81,6 @@ public class ZoneRulePerformance extends LoadableComponent<ZoneRulePerformance> 
         }
         assertEquals("http://192.168.1.78:8080/reports/search-terms-report.html", driver.getCurrentUrl());
     }
-
     public void isLoaded() throws Error {
         assertEquals(rulePerformanceURL, driver.getCurrentUrl());
         assertEquals(true, reportSelection.isDisplayed());
