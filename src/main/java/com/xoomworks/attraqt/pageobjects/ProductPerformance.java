@@ -17,7 +17,7 @@ public class ProductPerformance extends LoadableComponent<ProductPerformance> {
     private static WebDriver driver;
     public ProductPerformance(){driver = BaseTest.getDriver();}
     private String baseURL = UrlMap.getProperty("base.url");
-    public String productPerformanceURL = baseURL + "reports/products-report.html";
+    private String productPerformanceURL = baseURL + "reports/products-report.html";
     public void load() {
     driver.get(productPerformanceURL);
     }
@@ -55,6 +55,7 @@ public class ProductPerformance extends LoadableComponent<ProductPerformance> {
             if (li.getText().equals("Last week (starting Monday)"));
             li.click();
         }
+        assertEquals("Last week (starting Monday)", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
     }
     public void restToDefault(){
         resetToDefaultButton.click();
