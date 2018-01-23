@@ -22,6 +22,7 @@ public class MisspelledSearchTerms extends LoadableComponent<MisspelledSearchTer
     private static WebDriverWait wait;
     private String baseURL = UrlMap.getProperty("base.url");
     private String mispelledSearchTermsURL = baseURL + "reports/misspelled-report.html";
+
     public MisspelledSearchTerms() {
         driver = BaseTest.getDriver();
     }
@@ -66,8 +67,8 @@ public class MisspelledSearchTerms extends LoadableComponent<MisspelledSearchTer
     public void changeDateRange() {
         dateRangeDropdownButton.click();
         List<WebElement> options = driver.findElements(By.id("xw-date-range-param-menu"));
-        for(WebElement li : options){
-            if (li.getText().equals("Last week (starting Monday)"));
+        for (WebElement li : options) {
+            if (li.getText().equals("Last week (starting Monday)")) ;
             li.click();
         }
     }
@@ -76,7 +77,7 @@ public class MisspelledSearchTerms extends LoadableComponent<MisspelledSearchTer
         resetDefaultButton.click();
     }
 
-    public void goToSearchTerms(){
+    public void goToSearchTerms() {
 
         searchTermsButton.click();
     }

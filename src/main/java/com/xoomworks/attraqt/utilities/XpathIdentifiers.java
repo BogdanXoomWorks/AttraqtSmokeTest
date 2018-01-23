@@ -6,7 +6,7 @@ public class XpathIdentifiers {
     public static String MISSPELLED_SEARCH_TERMS_HEADER_BUTTON = ".//*[@id='SectionHeader']/a";
     public static String MISSPELLED_APPLY_REPORT_BUTTON = ".//*[@id='DruContent']/div/div/div/a[1]";
     public static String MISSPELLED_TABLE_DATA = ".//*[@id='misspelled-report']/tbody/tr/td";
-    public static String MISSPELLED_CORRECTED_TO =".//*[@id='misspelled-report']/thead/tr/th[3]";
+    public static String MISSPELLED_CORRECTED_TO = ".//*[@id='misspelled-report']/thead/tr/th[3]";
     public static String MISSPELLED_DASHBOARD_HEADER_BUTTON = ".//*[@id='SectionHeader']/div/a";
     public static String MISSPELLED_TABLE_HEADER = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead";
     //SEARCH TERMS PAGE

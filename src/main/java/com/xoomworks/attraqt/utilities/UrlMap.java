@@ -8,7 +8,7 @@ public class UrlMap {
     private static Properties properties;
 
 
-    public UrlMap(){
+    public UrlMap() {
         properties = new Properties();
         try {
             properties.load(UrlMap.class.getResourceAsStream("/url.properties"));
@@ -16,6 +16,7 @@ public class UrlMap {
             e.printStackTrace();
         }
     }
+
     public static String getProperty(String key) {
         return properties.getProperty(key);
     }

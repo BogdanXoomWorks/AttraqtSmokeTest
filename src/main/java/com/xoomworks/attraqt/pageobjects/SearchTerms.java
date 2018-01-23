@@ -70,26 +70,30 @@ public class SearchTerms extends LoadableComponent<SearchTerms> {
         }
         return variable;
     }
-    public void changeDateRange(){
+
+    public void changeDateRange() {
         searchTermsDropDown.click();
         List<WebElement> options = driver.findElements(By.id("xw-date-range-param-menu"));
-        for(WebElement li : options){
-            if (li.getText().equals("Last week (starting Monday)"));
+        for (WebElement li : options) {
+            if (li.getText().equals("Last week (starting Monday)")) ;
             li.click();
         }
     }
+
     public boolean showOnlyConversionsFunctionality() {
         tickShowOnlyConversions.click();
         boolean visible = averageResults.isDisplayed();
         System.out.println(visible);
         return visible;
     }
+
     public void includeMinandMaxResults() {
         tickShowOnlyConversions.click();
         tickIncludeMinMaxResults.click();
         assertEquals(true, minResults.isDisplayed());
         assertEquals(true, maxResults.isDisplayed());
     }
+
     public void isLoaded() throws Error {
         assertEquals(searchTermsURL, driver.getCurrentUrl());
         assertEquals(true, misspelledSearchTermsButton.isDisplayed());

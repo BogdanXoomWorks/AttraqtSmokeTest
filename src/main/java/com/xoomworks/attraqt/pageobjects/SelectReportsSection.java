@@ -10,7 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class SelectReportsSection extends LoadableComponent<SelectReportsSection> {
     private static WebDriver driver;
     private static WebDriverWait wait;
-    public SelectReportsSection(){driver = BaseTest.getDriver();}
+
+    public SelectReportsSection() {
+        driver = BaseTest.getDriver();
+    }
 
     //POM Variables
     @FindBy(xpath = ".//*[@id='SiteSelect']")
@@ -22,13 +25,14 @@ public class SelectReportsSection extends LoadableComponent<SelectReportsSection
     @FindBy(xpath = "//*[@id=\"DruContentLeftSync\"]/div[4]/div[2]/div[1]/a")
     private WebElement mispelledButton;
 
-    public void selectDataCenter(){
-    dataCenterDropdown.click();
-    screwfixEU.click();
+    public void selectDataCenter() {
+        dataCenterDropdown.click();
+        screwfixEU.click();
     }
 
-    public void selectReportsSection(){reportsButton.click();
-    mispelledButton.click();
+    public void selectReportsSection() {
+        reportsButton.click();
+        mispelledButton.click();
         //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ReportTableBody\"]")));
     }
 

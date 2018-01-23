@@ -14,8 +14,9 @@ public class ProductPerformanceTest extends BaseTest {
     private static LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class).get();
     private static ProductPerformance productPerformance = PageFactory.initElements(driver, ProductPerformance.class);
     private static Commons commons = PageFactory.initElements(driver, Commons.class);
+
     @Test
-    public void checkFonts(){
+    public void checkFonts() {
         landingPage.load();
         productPerformance.load();
         assertTrue(productPerformance.productPerformancecheckFont(XpathIdentifiers.PRODUCT_PERFORMANCE_SECTION_HEADER_TEXT));
@@ -24,8 +25,9 @@ public class ProductPerformanceTest extends BaseTest {
         assertTrue(productPerformance.productPerformancecheckFont(XpathIdentifiers.PRODUCT_PERFORMANCE_TABLE_BODY_TEXT));
         productPerformance.isLoaded();
     }
+
     @Test
-    public void checkColors(){
+    public void checkColors() {
         landingPage.load();
         productPerformance.load();
         //Check section header
@@ -42,8 +44,9 @@ public class ProductPerformanceTest extends BaseTest {
         assertTrue(commons.checkColors(XpathIdentifiers.TABLE_BODY_COLOR, Colors.CSS_COLOR, Colors.TABLE_CONTENS_COLOR));
         productPerformance.isLoaded();
     }
+
     @Test
-    public void checkFunctionality(){
+    public void checkFunctionality() {
         landingPage.load();
         productPerformance.load();
         productPerformance.changeSection();

@@ -13,7 +13,6 @@ public class Colors {
     public static String VIEWS_HEADER = "rgba(0, 113, 188, 0.184)";
     public static String ADDS_TO_BASKET_HEADER = "rgba(247, 146, 30, 0.184)";
     public static String UNIQUE_PURCHASES_HEADER = "rgba(102, 45, 145, 0.184)";
-
     //CHECK COLORS CSS
     public static String CSS_BACKGROUND_COLOR = "background-color";
     public static String CSS_BORDER_BOTTOM_COLOR = "border-bottom-color";

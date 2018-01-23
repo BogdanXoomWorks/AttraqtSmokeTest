@@ -51,7 +51,7 @@ public class ZoneRulePerformanceTest extends BaseTest {
         zoneRulePerformance.load();
         zoneRulePerformance.isLoaded();
         zoneRulePerformance.changeSection();
-        //zoneRulePerformance.resetToDefault();
+        zoneRulePerformance.resetToDefault();
         zoneRulePerformance.changePage();
 
     }

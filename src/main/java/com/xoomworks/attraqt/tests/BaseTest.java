@@ -14,7 +14,7 @@ public class BaseTest {
     protected static UrlMap urlMap;
 
     @BeforeClass
-    public static void setup(){
+    public static void setup() {
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\bogdan.apostol\\Desktop\\Geckodriver\\geckodriver.exe");
         driver = new FirefoxDriver();
         wait = new WebDriverWait(driver, 10L);
@@ -23,8 +23,19 @@ public class BaseTest {
     }
 
     @AfterClass
-    public static void teardown(){driver.quit();}
-    public static WebDriver getDriver(){return driver;}
-    public static WebDriverWait getWait(){return wait;}
-    public static UrlMap getUrlMap(){return urlMap;}
+    public static void teardown() {
+        driver.quit();
+    }
+
+    public static WebDriver getDriver() {
+        return driver;
+    }
+
+    public static WebDriverWait getWait() {
+        return wait;
+    }
+
+    public static UrlMap getUrlMap() {
+        return urlMap;
+    }
 }

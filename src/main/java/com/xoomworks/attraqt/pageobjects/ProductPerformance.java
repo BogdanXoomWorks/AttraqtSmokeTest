@@ -15,17 +15,22 @@ import static junit.framework.TestCase.assertEquals;
 
 public class ProductPerformance extends LoadableComponent<ProductPerformance> {
     private static WebDriver driver;
-    public ProductPerformance(){driver = BaseTest.getDriver();}
+
+    public ProductPerformance() {
+        driver = BaseTest.getDriver();
+    }
+
     private String baseURL = UrlMap.getProperty("base.url");
     private String productPerformanceURL = baseURL + "reports/products-report.html";
+
     public void load() {
-    driver.get(productPerformanceURL);
+        driver.get(productPerformanceURL);
     }
 
     //POM Variables
     @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[6]/a[1]")
     private WebElement applyReportButton;
-    @FindBy (xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[6]/a[2]")
+    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[6]/a[2]")
     private WebElement resetToDefaultButton;
     @FindBy(xpath = "//*[@id=\"xw-number-entries\"]")
     private WebElement numberOfItems;
@@ -48,27 +53,30 @@ public class ProductPerformance extends LoadableComponent<ProductPerformance> {
         }
         return variable;
     }
-    public void changeSection(){
-     dateRangeMenu.click();
+
+    public void changeSection() {
+        dateRangeMenu.click();
         List<WebElement> options = driver.findElements(By.id("xw-date-range-param-menu"));
-        for(WebElement li : options){
-            if (li.getText().equals("Last week (starting Monday)"));
+        for (WebElement li : options) {
+            if (li.getText().equals("Last week (starting Monday)")) ;
             li.click();
         }
         assertEquals("Last week (starting Monday)", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
     }
-    public void restToDefault(){
+
+    public void restToDefault() {
         resetToDefaultButton.click();
         assertEquals("This month (starting 1st)", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
     }
+
     public void isLoaded() throws Error {
-    assertEquals(productPerformanceURL, driver.getCurrentUrl());
-    assertEquals(true, applyReportButton.isDisplayed());
-    assertEquals(true, resetToDefaultButton.isDisplayed());
-    assertEquals(true, numberOfItems.isDisplayed());
-    assertEquals(true, dateRangeMenu.isDisplayed());
-    assertEquals(true, tableHeader.isDisplayed());
-    assertEquals(true, tableIcon.isDisplayed());
-    assertEquals(true, tableChart.isDisplayed());
+        assertEquals(productPerformanceURL, driver.getCurrentUrl());
+        assertEquals(true, applyReportButton.isDisplayed());
+        assertEquals(true, resetToDefaultButton.isDisplayed());
+        assertEquals(true, numberOfItems.isDisplayed());
+        assertEquals(true, dateRangeMenu.isDisplayed());
+        assertEquals(true, tableHeader.isDisplayed());
+        assertEquals(true, tableIcon.isDisplayed());
+        assertEquals(true, tableChart.isDisplayed());
     }
 }
