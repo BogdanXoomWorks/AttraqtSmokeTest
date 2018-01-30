@@ -30,6 +30,8 @@ public class RulePerformanceTest extends BaseTest {
     public void checkColors() {
         landingPage.load();
         rulePerformance.load();
+        //Check Square colors
+        assertTrue(rulePerformance.colorMatch());
         //Check section header
         assertTrue(commons.checkColors(XpathIdentifiers.PRODUCT_PERFORMANCE_SECTION_HEADER_TEXT, Colors.CSS_BACKGROUND_COLOR, Colors.SECTION_HEADER));
         //Check report controls

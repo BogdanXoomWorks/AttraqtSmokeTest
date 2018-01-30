@@ -40,12 +40,7 @@ public class FacetsPerformanceTest extends BaseTest {
         //Check Report Header Text Color
         assertTrue(commons.checkColors(XpathIdentifiers.FACETS_PERFORMANCE_REPORT_CONTROLS, Colors.CSS_COLOR, Colors.FP_REPORT_HEADER));
         //Check Color Squares
-        assertTrue(commons.checkColors(XpathIdentifiers.FACETS_PERFORMANCE_073e59, Colors.CSS_BACKGROUND_COLOR, Colors.FP_073e59));
-        assertTrue(commons.checkColors(XpathIdentifiers.FACETS_PERFORMANCE_096790, Colors.CSS_BACKGROUND_COLOR, Colors.FP_096790));
-        assertTrue(commons.checkColors(XpathIdentifiers.FACETS_PERFORMANCE_554696, Colors.CSS_BACKGROUND_COLOR, Colors.FP_554696));
-        assertTrue(commons.checkColors(XpathIdentifiers.FACETS_PERFORMANCE_662483, Colors.CSS_BACKGROUND_COLOR, Colors.FP_662483));
-        assertTrue(commons.checkColors(XpathIdentifiers.FACETS_PERFORMANCE_bf1660, Colors.CSS_BACKGROUND_COLOR, Colors.FP_bf1660));
-
+        assertTrue(facetsPerformance.colorMatch());
     }
 
     @Test

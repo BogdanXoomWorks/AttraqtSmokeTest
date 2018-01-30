@@ -18,16 +18,9 @@ public class Colors {
     public static String FP_TABLE_HEADER = "rgb(166, 166, 166)";
     public static String FP_TABLE_HEADER_TEXT_COLOR = "rgb(63, 105, 126)";
     public static String FP_REPORT_HEADER = "rgb(7, 62, 89)";
-    public static String FP_554696 = "rgb(85, 70, 150)";
-    public static String FP_096790 = "rgb(9, 103, 144)";
-    public static String FP_662483 = "rgb(102, 36, 131)";
-    public static String FP_bf1660 = "rgb(191, 22, 96)";
-    public static String FP_073e59 = "rgb(7, 62, 89)";
     //CHECK COLORS CSS
     public static String CSS_BACKGROUND_COLOR = "background-color";
     public static String CSS_BORDER_BOTTOM_COLOR = "border-bottom-color";
     public static String CSS_COLOR = "color";
-    public static String CSS_COLOR_SQUARE = "background";
-
 }
 

@@ -28,18 +28,11 @@ public class XpathIdentifiers {
     public static String RULE_PERFORMANCE_APPLY_REPORT_BUTTON = "/html/body/div[1]/section/div/div[1]/div[1]/div[3]/div[4]/a[1]";
     //FACETS PERFORMANCE
     public static String FACETS_PERFORMANCE_SECTION_HEADER = "//*[@id=\"SectionHeader\"]";
-    public static String FACETS_PERFORMANCE_TABLE_DATA_CONTENS = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/tbody";
     public static String FACETS_PERFORMANCE_TABLE_HEADER = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr";
     public static String FACETS_PERFORMANCE_TABLE_HEADER_TEXT = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr/th[3]";
     public static String FACETS_PERFORMANCE_REPORT_CONTROLS = "/html/body/div[1]/section/div/div[1]/div[1]/div[4]/a[1]";
-    public static String FACETS_PERFORMANCE_554696 = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/tbody/tr[1]/td[1]/div";
-    public static String FACETS_PERFORMANCE_096790 = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/tbody/tr[3]/td[1]/div";
-    public static String FACETS_PERFORMANCE_662483 = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/tbody/tr[7]/td[1]/div";
-    public static String FACETS_PERFORMANCE_bf1660 = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/tbody/tr[10]/td[1]/div";
-    public static String FACETS_PERFORMANCE_073e59 = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/tbody/tr[12]/td[1]/div";
     //Xpath COLORS
     public static String BG_COLOR_MISSPELLED_SEARCH_TERMS_SECTION_HEADER = "//*[@id=\"SectionHeader\"]";
-    public static String COLOR_MISSPELLED_SEARCH_TERMS_TABLE_HEADER = ".//*[@id='misspelled-report']/thead";
     public static String COLOR_MISSPELLED_SEARCH_TERMS_FONT_COLOR = ".//*[@id='misspelled-report']/thead/tr/th";
     public static String TABLE_BODY_COLOR = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/tbody";
 
