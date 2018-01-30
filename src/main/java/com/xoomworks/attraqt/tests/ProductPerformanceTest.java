@@ -53,4 +53,5 @@ public class ProductPerformanceTest extends BaseTest {
         productPerformance.restToDefault();
         productPerformance.isLoaded();
     }
+
 }

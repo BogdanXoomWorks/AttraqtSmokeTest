@@ -2,6 +2,7 @@ package com.xoomworks.attraqt.pageobjects;
 
 import com.xoomworks.attraqt.tests.BaseTest;
 import com.xoomworks.attraqt.utilities.UrlMap;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,6 +43,8 @@ public class ProductPerformance extends LoadableComponent<ProductPerformance> {
     private WebElement tableIcon;
     @FindBy(xpath = "//*[@id=\"highcharts-0\"]")
     private WebElement tableChart;
+    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[2]/div/div/button")
+    private WebElement downloadCSV;
 
     public boolean productPerformancecheckFont(String xpath) {
         WebElement text = driver.findElement(By.xpath(xpath));
@@ -68,6 +71,7 @@ public class ProductPerformance extends LoadableComponent<ProductPerformance> {
         resetToDefaultButton.click();
         assertEquals("This month (starting 1st)", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
     }
+
 
     public void isLoaded() throws Error {
         assertEquals(productPerformanceURL, driver.getCurrentUrl());

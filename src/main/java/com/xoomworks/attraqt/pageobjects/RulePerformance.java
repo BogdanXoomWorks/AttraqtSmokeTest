@@ -2,6 +2,7 @@ package com.xoomworks.attraqt.pageobjects;
 
 import com.xoomworks.attraqt.tests.BaseTest;
 import com.xoomworks.attraqt.utilities.UrlMap;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,10 +14,10 @@ import java.util.List;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
-public class ZoneRulePerformance extends LoadableComponent<ZoneRulePerformance> {
+public class RulePerformance extends LoadableComponent<RulePerformance> {
     private static WebDriver driver;
 
-    public ZoneRulePerformance() {
+    public RulePerformance() {
         driver = BaseTest.getDriver();
     }
 
@@ -30,11 +31,11 @@ public class ZoneRulePerformance extends LoadableComponent<ZoneRulePerformance> 
     //POM VARIABLES
     @FindBy(xpath = "/html/body/div[1]/header/div/div[2]/div/div")
     private WebElement reportSelection;
-    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[6]/a[1]")
+    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[3]/div[4]/a[1]")
     private WebElement applyReportButton;
-    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[6]/a[2]")
+    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[3]/div[4]/a[2]")
     private WebElement resetToDefaultButton;
-    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[3]")
+    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[3]/div[1]")
     private WebElement dateRangeDropdown;
     @FindBy(xpath = "//*[@id=\"xw-drilldown-page\"]")
     private WebElement drilldownPage;
@@ -44,6 +45,7 @@ public class ZoneRulePerformance extends LoadableComponent<ZoneRulePerformance> 
     private WebElement searchTextBox;
     @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[4]")
     private WebElement currencyDropdown;
+
 
     public boolean rulePerformanceCheckFont(String xpath) {
         WebElement text = driver.findElement(By.xpath(xpath));
@@ -58,12 +60,11 @@ public class ZoneRulePerformance extends LoadableComponent<ZoneRulePerformance> 
 
     public void changeSection() {
         dateRangeDropdown.click();
-        List<WebElement> options = driver.findElements(By.id("xw-date-range-param-menu"));
+        List<WebElement> options = driver.findElements(By.id("xw-date-range-param-button"));
         for (WebElement li : options) {
             if (li.getText().equals("Last week (starting Monday)")) ;
             li.click();
         }
-        assertEquals("Last week (starting Monday)", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
     }
 
     public void resetToDefault() {
@@ -94,6 +95,7 @@ public class ZoneRulePerformance extends LoadableComponent<ZoneRulePerformance> 
         }
         assertEquals("http://192.168.1.78:8080/reports/search-terms-report.html", driver.getCurrentUrl());
     }
+
 
     public void isLoaded() throws Error {
         assertEquals(rulePerformanceURL, driver.getCurrentUrl());
