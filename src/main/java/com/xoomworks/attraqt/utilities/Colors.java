@@ -7,7 +7,6 @@ public class Colors {
     public static String SEARCH_TABLE_HEADER_COLOR = "rgb(166, 166, 166)";
     public static String TABLE_CONTENS_COLOR = "rgb(166, 166, 166)";
     ///////////////////////////////////////////////////////////////////////////////////////
-    public static String COLOR_MISSPELLED_SEARCH_TERMS_TABLE_HEADER = "rgb(242, 242, 242)";
     public static String COLOR_MISSPELLED_SEARCH_TERMS_FONT_COLOR = "rgb(63, 105, 126)";
     //PRODUCT PERFORMANCE COLORS
     public static String VIEWS_HEADER = "rgba(0, 113, 188, 0.184)";

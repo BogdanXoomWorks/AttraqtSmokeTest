@@ -37,7 +37,7 @@ public class FacetsPerformance extends LoadableComponent<FacetsPerformance> {
     private WebElement resetToDefault;
     @FindBy(xpath = "//*[@id=\"highcharts-0\"]")
     private WebElement chart;
-    @FindBy(xpath = "/html/body/div[1]/section/div/div[2]/div[2]/div/svg")
+    @FindBy(xpath = "id(\"SectionHeader\")/div[1]/div[1]/span[1]")
     private WebElement reportSelection;
 
 
@@ -58,21 +58,11 @@ public class FacetsPerformance extends LoadableComponent<FacetsPerformance> {
 
     public void changeSection() {
         dateRangeDropdown.click();
-        List<WebElement> options = driver.findElements(By.id("xw-date-range-param-button"));
+        List<WebElement> options = driver.findElements(By.id("xw-date-range-param-menu"));
         for (WebElement li : options) {
             if (li.getText().equals("Last week (starting Monday)")) ;
             li.click();
         }
-    }
-
-    public void changePage() {
-        reportSelection.click();
-        List<WebElement> selection = driver.findElements(By.id("xw-main-nav-menu"));
-        for (WebElement li : selection) {
-            if (li.getText().equals("Search Terms & Misspelled Terms")) ;
-            li.click();
-        }
-        assertEquals("http://192.168.1.78:8080/reports/search-terms-report.html", driver.getCurrentUrl());
     }
 
     public boolean colorMatch() {

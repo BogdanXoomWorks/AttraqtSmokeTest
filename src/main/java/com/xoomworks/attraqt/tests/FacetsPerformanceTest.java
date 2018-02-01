@@ -48,7 +48,6 @@ public class FacetsPerformanceTest extends BaseTest {
         landingPage.load();
         facetsPerformance.load();
         facetsPerformance.isLoaded();
-        facetsPerformance.changePage();
         facetsPerformance.changeSection();
     }
 }

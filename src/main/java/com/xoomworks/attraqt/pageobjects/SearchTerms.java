@@ -53,7 +53,7 @@ public class SearchTerms extends LoadableComponent<SearchTerms> {
     private WebElement averageResults; //Used also for conversion functionality
     @FindBy(xpath = ".//*[@id='search-terms-report']/tbody/tr/td")
     private WebElement dataTableSearchTerms;
-    @FindBy(xpath = "//*[@id=\"highcharts-10\"]")
+    @FindBy(xpath = "id(\"xw-chart-container\")")
     private WebElement searchTermsChart;
     @FindBy(xpath = ".//*[@id='search-terms-report']/thead/tr/th[5]")
     private WebElement minResults;

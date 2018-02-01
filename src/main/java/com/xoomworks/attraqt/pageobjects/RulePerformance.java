@@ -38,7 +38,7 @@ public class RulePerformance extends LoadableComponent<RulePerformance> {
     private WebElement applyReportButton;
     @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[3]/div[4]/a[2]")
     private WebElement resetToDefaultButton;
-    @FindBy(xpath = "/html/body/div[1]/section/div/div[1]/div[1]/div[3]/div[1]")
+    @FindBy(xpath = "//*[@id=\"xw-date-range-param-button\"]")
     private WebElement dateRangeDropdown;
     @FindBy(xpath = "//*[@id=\"xw-drilldown-page\"]")
     private WebElement drilldownPage;
@@ -63,7 +63,7 @@ public class RulePerformance extends LoadableComponent<RulePerformance> {
 
     public void changeSection() {
         dateRangeDropdown.click();
-        List<WebElement> options = driver.findElements(By.id("xw-date-range-param-button"));
+        List<WebElement> options = driver.findElements(By.id("xw-date-range-param-menu"));
         for (WebElement li : options) {
             if (li.getText().equals("Last week (starting Monday)")) ;
             li.click();
@@ -96,7 +96,7 @@ public class RulePerformance extends LoadableComponent<RulePerformance> {
             if (li.getText().equals("Search Terms & Misspelled Terms")) ;
             li.click();
         }
-        assertEquals("http://192.168.1.78:8080/reports/search-terms-report.html", driver.getCurrentUrl());
+        assertEquals("http://192.168.1.244:8080/reports/search-terms-report.html", driver.getCurrentUrl());
     }
 
     public boolean colorMatch() {

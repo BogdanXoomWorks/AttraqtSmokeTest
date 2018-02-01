@@ -31,6 +31,12 @@ public class XpathIdentifiers {
     public static String FACETS_PERFORMANCE_TABLE_HEADER = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr";
     public static String FACETS_PERFORMANCE_TABLE_HEADER_TEXT = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr/th[3]";
     public static String FACETS_PERFORMANCE_REPORT_CONTROLS = "/html/body/div[1]/section/div/div[1]/div[1]/div[4]/a[1]";
+    //DASHBOARD
+    public static String DASHBOARD_RULE_PERFORMANCE = "id(\"DruContent\")/div[1]/div[1]/div[1]";
+    public static String DASHBOARD_PRODUCT_PERFORMANCE = "id(\"DruContent\")/div[1]/div[1]/div[2]";
+    public static String DASHBOARD_SEARCH_TERMS = "id(\"DruContent\")/div[2]/div[1]/div[1]";
+    public static String DASHBOARD_FACET_PERFORMANCE = "id(\"DruContent\")/div[2]/div[1]/div[2]";
+    public static String DASHBOARD_SECTION_HEADER = "id(\"SectionHeader\")";
     //Xpath COLORS
     public static String BG_COLOR_MISSPELLED_SEARCH_TERMS_SECTION_HEADER = "//*[@id=\"SectionHeader\"]";
     public static String COLOR_MISSPELLED_SEARCH_TERMS_FONT_COLOR = ".//*[@id='misspelled-report']/thead/tr/th";
