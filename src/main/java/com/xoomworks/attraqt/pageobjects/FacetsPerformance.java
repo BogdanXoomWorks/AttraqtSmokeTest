@@ -74,7 +74,7 @@ public class FacetsPerformance extends LoadableComponent<FacetsPerformance> {
         for (WebElement color : colorList) {
             String colorValue = color.getCssValue("background-color");
             String hex = Color.fromString(colorValue).asHex();
-            System.out.println(hex);
+            //System.out.println(hex);
             if (colors.contains(hex)) {
 
                 varaible = true;

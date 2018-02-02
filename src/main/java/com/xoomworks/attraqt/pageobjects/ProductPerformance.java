@@ -69,9 +69,8 @@ public class ProductPerformance extends LoadableComponent<ProductPerformance> {
 
     public void restToDefault() {
         resetToDefaultButton.click();
-        assertEquals("This month (starting 1st)", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
+        assertEquals("This calendar month", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
     }
-
 
     public void isLoaded() throws Error {
         assertEquals(productPerformanceURL, driver.getCurrentUrl());

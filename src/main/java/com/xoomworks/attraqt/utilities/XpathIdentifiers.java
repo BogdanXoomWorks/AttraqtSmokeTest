@@ -36,7 +36,7 @@ public class XpathIdentifiers {
     public static String DASHBOARD_PRODUCT_PERFORMANCE = "id(\"DruContent\")/div[1]/div[1]/div[2]";
     public static String DASHBOARD_SEARCH_TERMS = "id(\"DruContent\")/div[2]/div[1]/div[1]";
     public static String DASHBOARD_FACET_PERFORMANCE = "id(\"DruContent\")/div[2]/div[1]/div[2]";
-    public static String DASHBOARD_SECTION_HEADER = "id(\"SectionHeader\")";
+    public static String DASHBOARD_SECTION_HEADER = "id(\"SectionHeader\")/div[1]/div";
     //Xpath COLORS
     public static String BG_COLOR_MISSPELLED_SEARCH_TERMS_SECTION_HEADER = "//*[@id=\"SectionHeader\"]";
     public static String COLOR_MISSPELLED_SEARCH_TERMS_FONT_COLOR = ".//*[@id='misspelled-report']/thead/tr/th";

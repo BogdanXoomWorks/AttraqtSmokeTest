@@ -53,7 +53,7 @@ public class RulePerformance extends LoadableComponent<RulePerformance> {
     public boolean rulePerformanceCheckFont(String xpath) {
         WebElement text = driver.findElement(By.xpath(xpath));
         String fontFamily = text.getCssValue("font-family");
-        System.out.println("Font family->" + fontFamily);
+        //System.out.println("Font family->" + fontFamily);
         boolean variable = false;
         if (fontFamily.equals("\"Lato\", sans-serif")) {
             variable = true;
@@ -86,7 +86,7 @@ public class RulePerformance extends LoadableComponent<RulePerformance> {
             li.click();
         }
         resetToDefaultButton.click();
-        assertEquals("This month (starting 1st)", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
+        assertEquals("This calendar month", driver.findElement(By.xpath("//*[@id=\"xw-date-range-param-button\"]")).getText());
     }
 
     public void changePage() {
@@ -108,7 +108,7 @@ public class RulePerformance extends LoadableComponent<RulePerformance> {
         for (WebElement color : colorList) {
             String colorValue = color.getCssValue("outline-color");
             String hex = Color.fromString(colorValue).asHex();
-            System.out.println(hex);
+            //System.out.println(hex);
             if (colors.contains(hex)) {
 
                 varaible = true;

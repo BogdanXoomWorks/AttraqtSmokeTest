@@ -22,6 +22,6 @@ public class LandingPage extends LoadableComponent<LandingPage> {
     }
 
     protected void isLoaded() throws Error {
-        //assertEquals(1, driver.findElements(By.xpath(".//*[@id='SetupMain']/div/div/h2")).size());
+
     }
 }

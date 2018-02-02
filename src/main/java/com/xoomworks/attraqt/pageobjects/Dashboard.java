@@ -88,7 +88,7 @@ public class Dashboard extends LoadableComponent<Dashboard> {
     public boolean dashboardCheckFont(String xpath) {
         WebElement text = driver.findElement(By.xpath(xpath));
         String fontFamily = text.getCssValue("font-family");
-        System.out.println("Font family->" + fontFamily);
+        //System.out.println("Font family->" + fontFamily);
         boolean variable = false;
         if (fontFamily.equals("\"Lato\", sans-serif")) {
             variable = true;
