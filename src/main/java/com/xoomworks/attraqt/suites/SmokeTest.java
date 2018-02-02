@@ -1,7 +1,4 @@
 package com.xoomworks.attraqt.suites;
-
-
-import com.xoomworks.attraqt.pageobjects.FacetsPerformance;
 import com.xoomworks.attraqt.tests.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

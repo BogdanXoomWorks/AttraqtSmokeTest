@@ -113,17 +113,17 @@ public class Dashboard extends LoadableComponent<Dashboard> {
 
     public void productPerformnce() {
         productPerformanceButton.click();
-        assertEquals("http://192.168.1.244:8080/reports/products-report.html", driver.getCurrentUrl());
+        assertEquals(baseURL + "reports/products-report.html", driver.getCurrentUrl());
         dashboardReportingButton.click();
         openProductPerformanceReports.click();
     }
 
     public void searchTerms() {
         searchTermsButton.click();
-        assertEquals("http://192.168.1.244:8080/reports/search-terms-report.html", driver.getCurrentUrl());
+        assertEquals(baseURL + "reports/search-terms-report.html", driver.getCurrentUrl());
         dashboardReportingButton.click();
         misspelledSearchTermsButton.click();
-        assertEquals("http://192.168.1.244:8080/reports/misspelled-report.html", driver.getCurrentUrl());
+        assertEquals(baseURL + "reports/misspelled-report.html", driver.getCurrentUrl());
         dashboardReportingButton.click();
         openSearchTermsReport.click();
         assertEquals(true, searchTermsSettingsContainer.isDisplayed());
@@ -131,7 +131,7 @@ public class Dashboard extends LoadableComponent<Dashboard> {
 
     public void facetPerformance() {
         facetsPerformanceButton.click();
-        assertEquals("http://192.168.1.244:8080/reports/facets-report.html", driver.getCurrentUrl());
+        assertEquals(baseURL + "reports/facets-report.html", driver.getCurrentUrl());
         dashboardReportingButton.click();
         openFacetsReport.click();
         assertEquals(true, facetsReportSettingsContainer.isDisplayed());

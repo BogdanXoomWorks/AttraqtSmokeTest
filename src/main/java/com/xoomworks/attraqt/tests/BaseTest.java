@@ -7,11 +7,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.logging.Logger;
+
 public class BaseTest {
 
     protected static WebDriver driver;
     protected static WebDriverWait wait;
     protected static UrlMap urlMap;
+
 
     @BeforeClass
     public static void setup() {
