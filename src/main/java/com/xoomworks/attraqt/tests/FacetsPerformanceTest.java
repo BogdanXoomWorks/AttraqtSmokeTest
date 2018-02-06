@@ -34,7 +34,7 @@ public class FacetsPerformanceTest extends BaseTest {
         //Check header color
         assertTrue(commons.checkColors(XpathIdentifiers.FACETS_PERFORMANCE_SECTION_HEADER, Colors.CSS_BACKGROUND_COLOR, Colors.FP_SECTION_HEADER));
         //Check Table Header Color
-        assertTrue(commons.checkColors(XpathIdentifiers.FACETS_PERFORMANCE_TABLE_HEADER, Colors.CSS_COLOR, Colors.FP_TABLE_HEADER));
+        assertTrue(commons.checkColors(XpathIdentifiers.FACETS_PERFORMANCE_TABLE_HEADER, Colors.CSS_COLOR, Colors.TABLE_HEADER));
         //Check Table Header Text Color
         assertTrue(commons.checkColors(XpathIdentifiers.FACETS_PERFORMANCE_TABLE_HEADER_TEXT, Colors.CSS_BORDER_BOTTOM_COLOR, Colors.FP_TABLE_HEADER_TEXT_COLOR));
         //Check Report Header Text Color

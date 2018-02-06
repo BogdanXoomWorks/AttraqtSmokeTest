@@ -36,12 +36,8 @@ public class RulePerformanceTest extends BaseTest {
         assertTrue(commons.checkColors(XpathIdentifiers.PRODUCT_PERFORMANCE_SECTION_HEADER_TEXT, Colors.CSS_BACKGROUND_COLOR, Colors.SECTION_HEADER));
         //Check report controls
         assertTrue(commons.checkColors(XpathIdentifiers.RULE_PERFORMANCE_APPLY_REPORT_BUTTON, Colors.CSS_COLOR, Colors.COLOR_REPORT_HEADER));
-        //Check Views color
-        assertTrue(commons.checkColors(XpathIdentifiers.PRODUCT_PERFORMANCE_VIEWS, Colors.CSS_BACKGROUND_COLOR, Colors.VIEWS_HEADER));
-        //Check Adds to Basket color
-        assertTrue(commons.checkColors(XpathIdentifiers.PRODUCT_PERFORMANCE_ADDS_TO_BASKET, Colors.CSS_BACKGROUND_COLOR, Colors.ADDS_TO_BASKET_HEADER));
-        //Check Unique purchases color
-        assertTrue(commons.checkColors(XpathIdentifiers.PRODUCT_PERFORMANCe_UNIQUE_PURCHASES, Colors.CSS_BACKGROUND_COLOR, Colors.UNIQUE_PURCHASES_HEADER));
+        //Check Table Header color
+        assertTrue(commons.checkColors(XpathIdentifiers.PRODUCT_PERFORMANCE_TABLE_HEADER, Colors.CSS_COLOR, Colors.TABLE_HEADER));
         //Check Table contens color
         assertTrue(commons.checkColors(XpathIdentifiers.TABLE_BODY_COLOR, Colors.CSS_COLOR, Colors.TABLE_CONTENS_COLOR));
         rulePerformance.isLoaded();

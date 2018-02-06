@@ -21,7 +21,7 @@ public class XpathIdentifiers {
     public static String PRODUCT_PERFORMANCE_TABLE_HEADER_TEXT = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr";
     public static String PRODUCT_PERFORMANCE_CONTROLS_CONTAINER = "/html/body/div[1]/section/div/div[1]/div[1]";
     public static String PRODUCT_PERFORMANCE_TABLE_BODY_TEXT = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/tbody";
-    public static String PRODUCT_PERFORMANCE_VIEWS = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr/th[4]";
+    public static String PRODUCT_PERFORMANCE_TABLE_HEADER = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead";
     public static String PRODUCT_PERFORMANCE_ADDS_TO_BASKET = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr/th[6]";
     public static String PRODUCT_PERFORMANCe_UNIQUE_PURCHASES = "/html/body/div[1]/section/div/div[2]/div[1]/div/table/thead/tr/th[8]";
     //RULE PERFORMANCE
